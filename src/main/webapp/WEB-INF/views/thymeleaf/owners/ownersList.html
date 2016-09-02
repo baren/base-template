@@ -1,0 +1,24 @@
+
+<html xmlns:th="http://www.thymeleaf.org">
+<!--<head th:include="thymeleaf/layout :: headerFragment">-->
+    <!--&lt;!&ndash; replaced with fragment content &ndash;&gt;-->
+    <!--<!—- 'thymeleaf/layout' refers to /thymeleaf/layout.html on the filesystem &ndash;&gt;-->
+<!--</head>-->
+
+<body>
+sssss
+<!--<div th:include="thymeleaf/layout :: menuFragment">-->
+</div>
+<div th:if="${not #lists.isEmpty(selections)}">
+    <table>
+        …
+        <tbody>
+        <tr th:each="user : ${selections}">
+            <td th:text="${user.address}">John</td>
+            <td th:text="${user.telephone}">Smith</td>
+        </tr>
+        </tbody>
+    </table>
+</div>
+</body>
+</html>
